@@ -20,18 +20,18 @@ This project showcases the implementation of a flexible and scalable **Save/Load
 SaveLoadService/
 │
 ├── Data/
-│ 	 ├── PlayerProgress.cs 	  # Stores key gameplay data
-│	 └── SavesYG.cs 			  # Extends Yandex Games Plugin save system to support custom data
+│   ├── PlayerProgress.cs    # Stores key gameplay data
+│   └── SavesYG.cs           # Extends Yandex Games Plugin save system to support custom data
 │
 ├── Factory/
-│ 	 ├── IGameFactory.cs
-│	 ├── GameFactory.cs 		  # Handles object creation
-│ 	 ├── IStateFactory.cs
-│	 └── StateFactory.cs		  # Creates and manage game states
+│   ├── IGameFactory.cs
+│   ├── GameFactory.cs       # Handles object creation
+│   ├── IStateFactory.cs
+│   └── StateFactory.cs      # Creates and manages game states
 │
 ├── GameStateMachine/
-│ 	 ├── IStateMachine.cs
-│	 └── GameStateMachine.cs  # Manages transitions between game states
+│   ├── IStateMachine.cs
+│   └── GameStateMachine.cs  # Manages transitions between game states
 │
 ├── GameStates/
 │   ├── IState.cs            # Defines basic states that can run initialization logic, accept a payload on entry, and perform cleanup or transitions on exit
@@ -42,17 +42,17 @@ SaveLoadService/
 │   └── SaveTrigger.cs       # MonoBehavior component for saving player progress when the player enters the collider area on a scene
 │
 ├── Services/
-│   ├── IService.cs          			      # A base marker interface used to identify service classes
+│   ├── IService.cs                       # A base marker interface used to identify service classes
 │   ├── PersistentProgress/
 │   │   ├── ISavedProgressReader.cs       # An interface for loading player progress data from a given PlayerProgress instance with read-only access
-│   │   ├── ISavedProgressWriter.cs  	   # An interface for updating and reading player progress data from a given PlayerProgress instance
+│   │   ├── ISavedProgressWriter.cs       # An interface for updating and reading player progress data from a given PlayerProgress instance
 │   │   ├── IPersistentProgressService.cs # An interface for providing access to the current player progress for reading and updating across the game
 │   │   └── PersistentProgressService.cs  # Provide a reference to the player progress
 │   ├── SaveLoad/            
 │   │   ├── ISaveLoadService.cs           # Defines basic operations for saving, loading, and resetting player progress
-│   │   ├── SaveLoadService.cs  		      # Handles saving, loading, and resetting player progress using PlayerPrefs and synchronizes progress data across game components
-│   │   ├── **IAsyncSaveLoadService.cs**  # Defines an interface for asynchronous loading and saving of player progress, and load completion callback
-└── └── └── **YGAsyncSaveLoadService.cs** # Provides an asynchronous implementation of player progress saving and loading for the Yandex Games platform, integrating with YG SDK
+│   │   ├── SaveLoadService.cs            # Handles saving, loading, and resetting player progress using PlayerPrefs and synchronizes progress data across game components
+│   │   ├── IAsyncSaveLoadService.cs      # Defines an interface for asynchronous loading and saving of player progress, and load completion callback
+└── └── └── YGAsyncSaveLoadService.cs     # Provides an asynchronous implementation of player progress saving and loading for the Yandex Games platform, integrating with YG SDK
 </pre>
 
 ---
@@ -75,7 +75,7 @@ SaveLoadService/
 
 5. **Data**:
    - `PlayerProgress` stores user data relevant to gameplay progression.
-   - `SavesYG` extends Yandex Games Plugin save system to support custom data
+   - `SavesYG` extends the Yandex Games Plugin save system to support custom data
 
 ---
 
